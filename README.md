@@ -2,8 +2,8 @@
 ## 977.Squares of a Sorted Array, 209.Minimum Size Subarray Sum, 59.Spiral Matrix II, Summary of Array.
 May 11, 2023 
 
-The third day for Linked List. Today will learn about the linked list and its difference with array.\
-The challenges today are about how to remove items from the linked list, create new linked list, and the reversed linked list. Have fun!😀
+The third day for Linked List. Today we will learn about the linked list and its difference with arrays.\
+The challenges today are about how to remove items from the linked list, create a new linked list, and the reversed linked list. Have fun!😀
 
 ## Linked List Theory
 [Leetcode link](https://leetcode.com/problems/squares-of-a-sorted-array/) \
