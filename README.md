@@ -6,15 +6,29 @@ The third day for Linked List. Today we will learn about the linked list and its
 The challenges today are about how to remove items from the linked list, create a new linked list, and the reversed linked list. Have fun!😀
 
 ## Linked List Theory
-[Leetcode link](https://leetcode.com/problems/squares-of-a-sorted-array/) \
-[Video link](https://www.bilibili.com/video/BV1QB4y1D7ep/?spm_id_from=333.788&vd_source=63f26efad0d35bcbb0de794512ac21f3) \
-[Reading link](https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0977.%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9.md)\
-Can use **two pointers** to  solve the problem. A left one and a right one, the one with bigger square will be firstly returned as the last item of new result.\
-res = [float('inf')] * len(nums) # This is a good way to define a list with desired length and store the final result. 
+[Reading link](https://programmercarl.com/%E9%93%BE%E8%A1%A8%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.html#%E5%8D%95%E9%93%BE%E8%A1%A8)\
+A linked list is a linear structure connected by pointers. Each node is composed of two parts, one is the data field and the other is the pointer field (stores the pointer to the next node). The pointer field of the last node points to null (meaning null pointer).\
+Arrays are contiguously distributed in memory, but linked lists are not contiguously distributed in memory. Each node in the linked list is connected by  the pointers.\
+Create a linked list:
+
+```python
+# Here is a code block to create a linked list
+class ListNode:
+  def __init__(self, val, next=None):
+    self.val = val
+    self.next = next
+```
 
 <img src="https://github.com/gyjbb/Leetcode-Python2/blob/main/Screen%20Shot%202023-05-10%20at%203.35.08%20PM.png" width="600" height="400">
 
-## 203.
+## 203. Remove Linked List Elements
+[Leetcode link](https://leetcode.com/problems/remove-linked-list-elements/)\
+There are two conditions when remove an element from a linked list:
+1. remove a middle node
+2. remove the head node: head = head.next \
+By creating a virtual head node *dummy head*, both of the two kind of nodes can be removed in the same way.\
+To remove an element, find its last element, and change the last element's pointer points to the removed one's next element.\
+
 
 ## 707.
 
