@@ -1,6 +1,6 @@
 # Leetcode-Python3
-## 977.Squares of a Sorted Array, 209.Minimum Size Subarray Sum, 59.Spiral Matrix II, Summary of Array.
-May 11, 2023 
+## Linked List Theory, 203. Remove Linked List Elements, 59.Spiral Matrix II, Summary of Array.
+May 11, 2023  4h
 
 The third day for Linked List. Today we will learn about the linked list and its difference with arrays.\
 The challenges today are about how to remove items from the linked list, create a new linked list, and the reversed linked list. Have fun!😀
@@ -19,18 +19,50 @@ class ListNode:
     self.next = next
 ```
 
-<img src="https://github.com/gyjbb/Leetcode-Python2/blob/main/Screen%20Shot%202023-05-10%20at%203.35.08%20PM.png" width="600" height="400">
-
 ## 203. Remove Linked List Elements
 [Leetcode link](https://leetcode.com/problems/remove-linked-list-elements/)\
 There are two conditions when remove an element from a linked list:
 1. remove a middle node
 2. remove the head node: head = head.next \
-By creating a virtual head node *dummy head*, both of the two kind of nodes can be removed in the same way.\
+By creating a virtual head node **dummy head**, both of the two kind of nodes can be removed in the same way.\
 To remove an element, find its last element, and change the last element's pointer points to the removed one's next element.\
+Here deifine a <ins>current pointer</ins>, and **point to the dummy head**.
 
 
-## 707.
+<img src="https://github.com/gyjbb/Leetcode-Python3/blob/main/Screen%20Shot%202023-05-11%20at%208.39.06%20PM.png" width="700" height="300">
+
+
+## 707. Design Linked List
+[Leetcode link](https://leetcode.com/problems/design-linked-list/)\
+Can also use **dummy head** to solve this comprehensive question.\
+We need to finish defining the following functions:
+1. get the element in linked list at a given index 
+2. add a new value before the head of a linked list
+3. add a new value after the tail of a linked list
+4. add a new node before the given index
+5. delete the node at the given index. 
+
+For question 1, firstly, define a <ins>current pointer</ins> for traverse. And **point to the real head** this time. The head of the linked list will be returned in the end. If there is no cur defined and use head for the traverse, the head will change and can't be used to return in the end of the operation.\
+For question 2 add a new node, the order is very important. Create the right new pointer first, then create the left one. Like follows: \
+> newnode.next = dummynode.next \
+> dummynode.next = newnode
+
+~~PICTURE HERE~~
+
+For question 3, current needs to traverse from the dummyhead to the last actual node. When current.next is null, it means the current has now points to the tail. Then let the current node point to the newnode.\
+For question 4, to add a new node before the index n, must know the (n-1) node. So <ins>current node</ins> needs to traverse and be defined as the (n-1) node. Then follow the same order as question 2:\
+> newnode.next = cur.next \
+> cur.next = newnode
+
+For question 5, the same as For question 4, the current pointer needs to traversa from dummynode to the (n-1) node, and point to (n-1) node. So the node with index n will be current.next. Let current.next = current.next.next, then node n will be deleted.
+
+~~PICTURE HERE~~
+
+
+
+
+
+
 
 ## 206.
 
