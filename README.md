@@ -26,7 +26,7 @@ There are two conditions when remove an element from a linked list:
 2. remove the head node: head = head.next 
 
 By creating a virtual head node **dummy head**, both of the two kind of nodes can be removed in the same way.\
-To remove an element, find its last element, and change the last element's pointer points to the removed one's next element.\
+To remove an element, find its last element, and change the last element's pointer,pointing to the removed one's next element.\
 Here define a <ins>current pointer</ins>, and **point to the dummy head**.
 
 
@@ -51,7 +51,7 @@ For question 2 add a new node, the order is very important. Create the right new
 <img src="https://github.com/gyjbb/Leetcode-Python3/blob/main/Screen%20Shot%202023-05-11%20at%209.19.17%20PM.png" width="300" height="180">
 
 For question 3, current needs to traverse from the **dummy head** to the last actual node. When current.next is null, it means the current has now points to the tail. Then let the current node point to the newnode.\
-For question 4, to add a new node before the index n, must know the (n-1) node. So the <ins>current node</ins> needs to traverse from the **dummy head** to the (n-1) node. Then follow the same order as question 2:
+For question 4, to add a new node before the index n, must know the (n-1) node. So the <ins>current pointer</ins>/node needs to traverse from the **dummy head** to the (n-1) node. Then follow the same order as question 2:
 > newnode.next = cur.next \
 > cur.next = newnode
 
