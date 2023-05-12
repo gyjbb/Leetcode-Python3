@@ -47,7 +47,7 @@ For question 2 add a new node, the order is very important. Create the right new
 > newnode.next = dummynode.next \
 > dummynode.next = newnode
 
-~~PICTURE HERE~~
+<img src="https://github.com/gyjbb/Leetcode-Python3/blob/main/Screen%20Shot%202023-05-11%20at%209.19.17%20PM.png" width="300" height="180">
 
 For question 3, current needs to traverse from the dummyhead to the last actual node. When current.next is null, it means the current has now points to the tail. Then let the current node point to the newnode.\
 For question 4, to add a new node before the index n, must know the (n-1) node. So <ins>current node</ins> needs to traverse and be defined as the (n-1) node. Then follow the same order as question 2:
