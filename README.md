@@ -124,13 +124,13 @@ class MyLinkedList:
 Can use **Two Pointers** to solve this question: current pointer and a previous pointer.\
 **The current pointer** starts from the **real head**, and traverses to the tail(before null).\
 Here the order is also very important. We can define a temporary pointer to store the current node's next node. Then let the current point to the previous node and change the direction of the linked list. The temporary pointer is to save the original current node's next node. 
-> temp = cur.next
+> temp = cur.next \
 > cur.next = pre
 
 <img src="https://github.com/gyjbb/Leetcode-Python3/blob/main/Screen%20Shot%202023-05-11%20at%2011.25.18%20PM.png" width="300" height="150">
 
 Then move both pre and cur to the next position:
-> pre = cur
+> pre = cur \
 > cur = temp
 ```python
 # Definition for singly-linked list.
