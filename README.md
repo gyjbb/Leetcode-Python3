@@ -23,7 +23,7 @@ class ListNode:
 [Leetcode link](https://leetcode.com/problems/remove-linked-list-elements/)\
 There are two conditions when remove an element from a linked list:
 1. remove a middle node
-2. remove the head node: head = head.next \
+2. remove the head node: head = head.next 
 
 By creating a virtual head node **dummy head**, both of the two kind of nodes can be removed in the same way.\
 To remove an element, find its last element, and change the last element's pointer points to the removed one's next element.\
