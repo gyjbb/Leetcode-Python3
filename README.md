@@ -151,7 +151,7 @@ class Solution:
         return pre
 ```
 
-
+[Reading for single linked list](https://cloud.tencent.com/developer/article/1794143)
 
 
 
